@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Primera preentrega</title>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Preentrega coder</title>
 </head>
 <body>
-    <h1>Primera preentrega</h1>
+    <h1>Lista de tareas</h1>
+    
+    <div class="contenedor-tareas">
+
+        <label class="label-tarea" for="tarea">Tareas <span id="modo-light">☀️</span></label>
+        <input class="input" type="text">
+    
+        <button id="agregar" class="agregar">Agregar</button>
+    
+        <ul id="lista-tareas">
+        </ul>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
