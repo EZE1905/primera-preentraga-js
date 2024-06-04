@@ -149,7 +149,23 @@ function agregarTarea() {
 
     agregar.addEventListener('click', agregarTarea);
 
+    guardarTareas()
 }
 
 // Llamada a la función
 agregarTarea();
+
+//* FUNCION PARA GUARDAR LAS TAREAS EN LOCAL STORAGE
+
+function guardarTareas() {
+    const tareas = document.querySelectorAll('.tarea');
+
+    if (tareas.length > 0) {
+        const tareasGuardadas = [];
+        tareas.forEach((tarea) => {
+            tareasGuardadas.push(tarea.textContent);    
+        });
+        localStorage.setItem('tareas', JSON.stringify(tareasGuardadas));
+    }
+
+}
